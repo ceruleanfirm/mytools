@@ -171,6 +171,7 @@ def myIPv4(url='http://ping.eu'):
     return ip[0]
 
 publicIP = myIPv4
+pubIP = myIPv4
 
 
 def ipinfo(ip=None):

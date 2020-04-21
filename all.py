@@ -7,36 +7,37 @@ from pexpect import pxssh
 from threading import Thread
 
 def showmytools():
-    print('    """find(path,filename)"""\n\
-    """grep(regex,file)"""\n\
+    print('    """brutezip(zfile,dico)"""\n\
     """cgrep(regex,file)"""\n\
-    """uniq(file)"""\n\
-    """myIPv4()"""\n\
-    """ipinfo()"""\n\
-    """infoservice(domain|host|IP,port)"""\n\
-    """spingport(domain|host|IP,port)"""\n\
-    """pingport(domain|host|IP,port)"""\n\
-    """rotateby(key,txt,back=None)"""\n\
+    """deltadirectory(src_dir,dst_dir) (abs. path)"""\n\
+    """dnsrequest(domain)"""\n\
     """enterpassword(user)"""\n\
+    """epoch()"""\n\
+    """epoch2date(unixtime)"""\n\
+    """exploresqlitedb(db_file (abs. path)"""\n\
+    """findandhash(path,filename,algo)"""\n\
+    """find(path,filename)"""\n\
+    """funnycrypt(dico,h)"""\n\
+    """grep(regex,file)"""\n\
+    """hashfile(algo,file)"""\n\
+    """hashme(algo,str(me))"""\n\
     """hex2bin(x)"""\n\
     """hex2dec(x)"""\n\
-    """funnycrypt(dico,h)"""\n\
-    """brutezip(zfile,dico)"""\n\
-    """reverselookup(ip|domain)"""\n\
-    """dnsrequest(domain)"""\n\
+    """infoservice(domain|host|IP,port)"""\n\
+    """ipinfo()"""\n\
+    """myIPv4()"""\n\
+    """pingport(domain|host|IP,port)"""\n\
     """quadArecord(domain)"""\n\
-    """hashme(algo,str(me))"""\n\
-    """hashfile(algo,file)"""\n\
-    """findandhash(path,filename,algo)"""\n\
-    """shathat(dico,h)"""\n\
-    """deltadirectory(src_dir,dst_dir) (abs. path)"""\n\
-    """sshcmd(user,ip,[port])"""\n\
-    """sshbot(user)"""\n\
+    """reverselookup(ip|domain)"""\n\
+    """rotateby(key,txt,back=None)"""\n\
     """scanports(ip,*ports)"""\n\
-    """exploresqlitedb(db_file (abs. path)"""\n\
-    """epoch2date(unixtime)"""\n\
-    """utc_epoch()"""\n\
-    """epoch()"""')
+    """shathat(dico,h)"""\n\
+    """spingport(domain|host|IP,port)"""\n\
+    """sshbot(user)"""\n\
+    """sshcmd(user,ip,[port])"""\n\
+    """uniq(file)"""\n\
+    """utc_epoch()""" ')
+
 
 
 def epoch():
@@ -171,7 +172,6 @@ def myIPv4(url='http://ping.eu'):
     return ip[0]
 
 publicIP = myIPv4
-pubIP = myIPv4
 
 
 def ipinfo(ip=None):

@@ -100,7 +100,7 @@ def uniq(fic):
     with open(new,"w") as out_f:
         for i in ls:
             out_f.write(i)
-	print('%s created.'%new)
+    print('%s created.'%new)
 
 
 def infoservice(ip,port):
@@ -417,9 +417,9 @@ def deltadirectory(src,dst):
     cmd="cp -rp "+src+"/* "+dst+"/"
     for i in os.listdir(src):
         if os.path.isdir(src+"/"+i):
-            print('Le contenu du répertoire "%s" ne sera pas analysé ...'%i)
-    	if i not in os.listdir(dst):
-    		ls.append(i)
+            print('Le contenu du répertoire %s ne sera pas analysé ...'%i)
+        if i not in os.listdir(dst):
+            ls.append(i)
     for j in sorted(ls):
     	print('Only in %s : %s'%(src,j))
     
@@ -432,7 +432,7 @@ def deltadirectory(src,dst):
     if q=="" or q.lower().startswith('o'):
       for i in r1:
         if i not in sorted(r2):
-    	    os.chdir(src)
+            os.chdir(src)
             try:
                 shutil.copy2(i,dst)
             except IOError as e:
@@ -441,7 +441,7 @@ def deltadirectory(src,dst):
                     os.system(cmd)
                 else:
                     print(e)
-    	    print('%s copié dans %s'%(i,dst))
+            print('%s copié dans %s'%(i,dst))
     else: 
         print('Abandon')
         return
